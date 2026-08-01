@@ -25,14 +25,14 @@ const PRODUCTS: Product[] = [
 ];
 
 function ProductCard({ product, delayMs }: { product: Product; delayMs: number }) {
-  const card = useReveal<HTMLDivElement>(delayMs);
+  const { ref, visible } = useReveal<HTMLDivElement>(delayMs);
 
   return (
     <div
-      ref={card.ref}
+      ref={ref}
       className={cn(
         "reveal bg-white px-6 pt-10 pb-10 text-center",
-        card.visible && "reveal-visible"
+        visible && "reveal-visible"
       )}
     >
       <Image
@@ -53,15 +53,15 @@ function ProductCard({ product, delayMs }: { product: Product; delayMs: number }
 }
 
 export function ProductsSection() {
-  const heading = useReveal<HTMLDivElement>();
+  const { ref: headingRef, visible: headingVisible } = useReveal<HTMLDivElement>();
 
   return (
     <section id="product-section" className="pt-20">
       <div
-        ref={heading.ref}
+        ref={headingRef}
         className={cn(
           "reveal container mx-auto px-6 text-center",
-          heading.visible && "reveal-visible"
+          headingVisible && "reveal-visible"
         )}
       >
         <p className="font-script text-[18px] italic text-ink">

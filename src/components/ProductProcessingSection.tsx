@@ -11,15 +11,15 @@ const TIMELINE_ITEMS = [
 ];
 
 export function ProductProcessingSection() {
-  const text = useReveal<HTMLDivElement>();
-  const photo = useReveal<HTMLDivElement>(150);
+  const { ref: textRef, visible: textVisible } = useReveal<HTMLDivElement>();
+  const { ref: photoRef, visible: photoVisible } = useReveal<HTMLDivElement>(150);
 
   return (
     <section className="py-16 md:py-20 lg:py-[100px]">
       <div className="container mx-auto grid items-center gap-16 px-6 md:grid-cols-2">
         <div
-          ref={text.ref}
-          className={cn("reveal", text.visible && "reveal-visible")}
+          ref={textRef}
+          className={cn("reveal", textVisible && "reveal-visible")}
         >
           <p className="font-script text-[18px] italic text-ink">
             Grown With Utmost Care
@@ -49,10 +49,10 @@ export function ProductProcessingSection() {
           />
         </div>
         <div
-          ref={photo.ref}
+          ref={photoRef}
           className={cn(
             "reveal bg-white p-[10px]",
-            photo.visible && "reveal-visible"
+            photoVisible && "reveal-visible"
           )}
         >
           <Image

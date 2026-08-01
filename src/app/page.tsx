@@ -8,6 +8,7 @@ import { ProductProcessingSection } from "@/components/ProductProcessingSection"
 import { ProductsSection } from "@/components/ProductsSection";
 import { CtaBanner } from "@/components/CtaBanner";
 import { TeamSection } from "@/components/TeamSection";
+import { ContactFooterSection } from "@/components/ContactFooterSection";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <ProductsSection />
         <CtaBanner />
         <TeamSection />
+        <ContactFooterSection />
       </main>
       <WhatsAppButton />
     </>

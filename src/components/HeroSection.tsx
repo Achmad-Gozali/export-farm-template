@@ -11,11 +11,11 @@ interface HeroSlide {
 const SLIDES: HeroSlide[] = [
   {
     src: "/images/hero-slide-1.jpeg",
-    alt: "Alpine meadow and farmhouse landscape",
+    alt: "Lanskap padang rumput pegunungan dan rumah pertanian",
   },
   {
     src: "/images/hero-slide-2.jpeg",
-    alt: "Alpine meadow and farmhouse landscape",
+    alt: "Lanskap padang rumput pegunungan dan rumah pertanian",
   },
 ];
 
@@ -23,6 +23,7 @@ const AUTOPLAY_INTERVAL_MS = 7000;
 
 export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,6 +32,11 @@ export function HeroSection() {
 
     return () => clearInterval(timer);
   }, [activeIndex]);
+
+  useEffect(() => {
+    const timer = requestAnimationFrame(() => setHasMounted(true));
+    return () => cancelAnimationFrame(timer);
+  }, []);
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);
@@ -60,13 +66,21 @@ export function HeroSection() {
       ))}
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <p className="font-script italic text-[22px] font-semibold text-white mb-2 sm:mb-3">
-          The Taste Of Nature
+        <p
+          className={`font-script italic text-[22px] font-semibold text-white mb-2 sm:mb-3 transition-all duration-700 ease-out ${
+            hasMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+          }`}
+        >
+          Cita Rasa Asli Alam
         </p>
-        <h1 className="font-sans uppercase text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-medium text-white tracking-[0.2em] leading-[1.2]">
-          Natural, fresh and
+        <h1
+          className={`font-sans uppercase text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-medium text-white tracking-[0.15em] sm:tracking-[0.2em] leading-[1.2] transition-all duration-700 ease-out delay-150 ${
+            hasMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+          }`}
+        >
+          Alami, segar, dan
           <br />
-          locally sourced
+          bersumber lokal
         </h1>
       </div>
 
@@ -75,7 +89,7 @@ export function HeroSection() {
           <button
             key={index}
             type="button"
-            aria-label={`Slide ${index + 1}`}
+            aria-label={`Slide ke-${index + 1}`}
             onClick={() => handleDotClick(index)}
             className={`h-2 w-2 rounded-full transition-colors duration-300 ${
               index === activeIndex ? "bg-white" : "bg-white/40"

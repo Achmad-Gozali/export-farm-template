@@ -10,18 +10,27 @@ interface Product {
   description: string;
 }
 
-const DESCRIPTION =
-  "Ballan wrasse climbing gourami amur pike Arctic char.";
-
 const PRODUCTS: Product[] = [
-  { name: "Milk", image: "/images/product-milk.jpeg", description: DESCRIPTION },
-  { name: "Kefir", image: "/images/product-kefir.jpeg", description: DESCRIPTION },
   {
-    name: "Goat Cheese",
-    image: "/images/product-goat-cheese.jpeg",
-    description: DESCRIPTION,
+    name: "Susu",
+    image: "/images/product-milk.jpeg",
+    description: "Susu segar dari peternakan lokal tanpa bahan pengawet.",
   },
-  { name: "Butter", image: "/images/product-butter.jpeg", description: DESCRIPTION },
+  {
+    name: "Kefir",
+    image: "/images/product-kefir.jpeg",
+    description: "Minuman fermentasi probiotik alami, baik untuk pencernaan.",
+  },
+  {
+    name: "Keju Kambing",
+    image: "/images/product-goat-cheese.jpeg",
+    description: "Keju kambing premium bertekstur lembut dan gurih.",
+  },
+  {
+    name: "Mentega",
+    image: "/images/product-butter.jpeg",
+    description: "Mentega olahan alami, kaya rasa untuk berbagai hidangan.",
+  },
 ];
 
 function ProductCard({ product, delayMs }: { product: Product; delayMs: number }) {
@@ -31,7 +40,7 @@ function ProductCard({ product, delayMs }: { product: Product; delayMs: number }
     <div
       ref={ref}
       className={cn(
-        "reveal bg-white px-6 pt-10 pb-10 text-center",
+        "group reveal bg-white px-6 pt-10 pb-10 text-center transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lg",
         visible && "reveal-visible"
       )}
     >
@@ -40,7 +49,7 @@ function ProductCard({ product, delayMs }: { product: Product; delayMs: number }
         alt={product.name}
         width={280}
         height={280}
-        className="mx-auto h-[220px] w-auto object-contain"
+        className="mx-auto h-[220px] w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-105"
       />
       <h3 className="mt-8 font-sans text-[20px] font-medium uppercase tracking-[2.5px] text-[#334b35]">
         {product.name}
@@ -65,14 +74,14 @@ export function ProductsSection() {
         )}
       >
         <p className="font-script text-[18px] italic text-ink">
-          Most Popular Products
+          Produk Terpopuler
         </p>
         <h2 className="mt-3 font-sans text-[30px] font-medium uppercase tracking-[3.5px] text-ink">
-          Organic Products
+          Produk Organik
         </h2>
         <p className="mx-auto mt-5 max-w-xl font-sans text-[15px] text-black/61">
-          Sed ut perspiciatis aperiam unde omnis istetus error volupta
-          dolorem que laudantium, totam rem.
+          Rangkaian produk susu dan olahan organik pilihan, diproses secara
+          alami untuk menjaga cita rasa dan kandungan gizinya.
         </p>
       </div>
       <div className="container mx-auto mt-16 grid grid-cols-2 gap-8 px-6 pb-20 md:grid-cols-4">

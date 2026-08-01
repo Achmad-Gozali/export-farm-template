@@ -19,7 +19,7 @@ export function AboutSection() {
         >
           <Image
             src="/images/about-modern-farming.jpeg"
-            alt="Modern farming"
+            alt="Pertanian modern"
             width={1100}
             height={589}
             className="h-auto w-full object-cover"
@@ -34,21 +34,22 @@ export function AboutSection() {
           )}
         >
           <p className="font-script text-[18px] font-medium italic text-black">
-            Tasty and fresh greens
+            Sayuran segar dan berkualitas
           </p>
           <h2 className="mt-3 text-[30px] font-medium tracking-[0.12em] text-black uppercase">
-            Modern Farming
+            Pertanian Modern
           </h2>
           <p className="mt-6 text-[16px] leading-[26px] text-black/60">
-            Sed ut perspiciatis aperiam unde omnis istetus error volupta
-            dolorem que, totam rem unde omnis.
+            Nativecode menghadirkan hasil pertanian organik pilihan yang
+            diproses dengan standar modern, menjaga kesegaran dan nilai
+            gizinya sejak dari kebun.
           </p>
           <p className="mt-4 text-[14px] leading-[26px] text-black/60">
-            Lorem ipsum incididunt ut labore et dolore magna aliqua dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad dolore
-            magna aliqua minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo.
+            Kami bermitra dengan petani lokal terpercaya di berbagai daerah
+            di Indonesia, menerapkan praktik pertanian berkelanjutan mulai
+            dari penanaman hingga panen. Setiap produk yang sampai ke tangan
+            Anda benar-benar alami, bebas bahan kimia berbahaya, dan diproses
+            dengan penuh tanggung jawab.
           </p>
         </div>
       </div>

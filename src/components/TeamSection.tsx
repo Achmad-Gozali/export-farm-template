@@ -15,22 +15,22 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     image: "/images/team-tom-fill.jpeg",
     name: "Tom Fill",
-    role: "Founder & owner",
+    role: "Pendiri & Pemilik",
   },
   {
     image: "/images/team-sam-jack.jpeg",
     name: "Sam Jack",
-    role: "Harvester",
+    role: "Pemanen",
   },
   {
     image: "/images/team-nick-jon.jpeg",
     name: "Nick Jon",
-    role: "Farmer",
+    role: "Petani",
   },
   {
     image: "/images/team-mark-ten.jpeg",
     name: "Mark Ten",
-    role: "Harvester",
+    role: "Pemanen",
   },
 ];
 
@@ -46,13 +46,15 @@ function TeamCard({ image, name, role, delayMs }: TeamCardProps) {
       ref={ref}
       className={cn("reveal text-center", visible && "reveal-visible")}
     >
-      <Image
-        src={image}
-        alt={name}
-        width={280}
-        height={280}
-        className="w-full aspect-square object-cover"
-      />
+      <div className="overflow-hidden">
+        <Image
+          src={image}
+          alt={name}
+          width={280}
+          height={280}
+          className="w-full aspect-square object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </div>
       <p className="mt-4 font-sans text-[18px] font-medium not-italic text-black/80">
         {name}
       </p>
@@ -67,9 +69,9 @@ export function TeamSection() {
   return (
     <section id="team-section" className="py-12 md:py-16 lg:py-20">
       <div className="container mx-auto text-center px-6">
-        <p className="italic font-script text-[18px]">Key People</p>
+        <p className="italic font-script text-[18px]">Orang-Orang Kunci</p>
         <h2 className="mt-3 font-sans text-[30px] font-medium tracking-[3.5px] uppercase">
-          Our Best Team
+          Tim Terbaik Kami
         </h2>
       </div>
       <div className="container mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 px-6">

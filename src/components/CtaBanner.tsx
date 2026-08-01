@@ -14,13 +14,11 @@ export function CtaBanner() {
       <h2
         ref={ref}
         className={cn(
-          "reveal px-4 text-center text-[28px] leading-[36px] font-semibold tracking-[1.6px] text-white md:text-[36px] md:leading-[44px] lg:text-[45px] lg:leading-[54px]",
+          "reveal mx-auto max-w-3xl px-4 text-center text-[26px] leading-[34px] font-semibold tracking-[1.6px] text-white sm:text-[32px] sm:leading-[40px] md:text-[36px] md:leading-[44px] lg:text-[45px] lg:leading-[54px]",
           visible && "reveal-visible"
         )}
       >
-        We try to Create
-        <br />
-        the Best Products
+        Kami Berkomitmen Menghadirkan Produk Terbaik
       </h2>
     </section>
   );

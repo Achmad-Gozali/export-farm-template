@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 import { useReveal } from "@/hooks/useReveal";
 
 const TIMELINE_ITEMS = [
-  "2002 Nemo enim ipsam voluptatem esit''",
-  "2009 Temporibus autem quibusdam ofics''",
-  "2012 Lorem ipsum dolor sit amet''",
+  "2002 — Menjalin kemitraan dengan petani organik lokal pertama",
+  "2009 — Memperluas jaringan distribusi ke seluruh Indonesia",
+  "2012 — Meraih sertifikasi standar mutu ekspor internasional",
 ];
 
 export function ProductProcessingSection() {
@@ -22,15 +22,15 @@ export function ProductProcessingSection() {
           className={cn("reveal", textVisible && "reveal-visible")}
         >
           <p className="font-script text-[18px] italic text-ink">
-            Grown With Utmost Care
+            Ditanam dengan Penuh Perhatian
           </p>
           <h2 className="mt-3 font-sans text-[30px] font-medium uppercase tracking-[3.5px] text-ink">
-            Organic Product Processing
+            Proses Produk Organik
           </h2>
           <p className="mt-5 font-sans text-[15px] text-black/61">
-            Sed ut perspiciatis aperiam unde omnis istetus error volupta
-            dolorem que laudantium, totam rem dolorem lorem ipsum est sit
-            amet.
+            Setiap produk melalui proses pengolahan yang higienis dan
+            terstandarisasi, mulai dari pemanenan hingga pengemasan, untuk
+            memastikan kualitas terbaik sampai ke tangan konsumen.
           </p>
           <ul className="mt-5 list-disc space-y-2 pl-5 font-sans text-[15px] text-black/61">
             {TIMELINE_ITEMS.map((item) => (
@@ -38,11 +38,11 @@ export function ProductProcessingSection() {
             ))}
           </ul>
           <h5 className="mt-8 font-sans text-[24px] font-medium uppercase tracking-[3.5px] text-ink">
-            Quality Awards
+            Penghargaan Kualitas
           </h5>
           <Image
             src="/images/quality-awards.png"
-            alt="Quality awards"
+            alt="Penghargaan kualitas"
             width={300}
             height={71}
             className="mt-5 h-auto w-[300px] max-w-full"

@@ -20,8 +20,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Elispor - Modern Farming",
-  description: "Natural, fresh and locally sourced organic produce.",
+  title: "Nativecode - Pertanian Modern",
+  description:
+    "Hasil pertanian organik alami, segar, dan bersumber langsung dari petani lokal terpercaya.",
   icons: {
     icon: [
       { url: "/seo/favicon-32.png", sizes: "32x32" },
@@ -38,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${raleway.variable} ${cormorant.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

@@ -13,27 +13,23 @@ interface Feature {
 const FEATURES: Feature[] = [
   {
     icon: Sprout,
-    title: "Grow Organic",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+    title: "Tumbuh Organik",
+    description: "Ditanam tanpa pestisida kimia demi hasil panen yang alami.",
   },
   {
     icon: Shovel,
-    title: "Harvest Plan",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+    title: "Rencana Panen",
+    description: "Dijadwalkan cermat agar panen tepat waktu dan tetap segar.",
   },
   {
     icon: Wheat,
-    title: "Seed Planting",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+    title: "Penanaman Benih",
+    description: "Bibit unggul pilihan untuk pertumbuhan yang sehat dan optimal.",
   },
   {
     icon: Leaf,
-    title: "Veggy Care",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+    title: "Perawatan Tanaman",
+    description: "Dirawat teliti di tiap tahap hingga siap didistribusikan.",
   },
 ];
 
@@ -55,7 +51,7 @@ function FeatureCol({ icon: Icon, title, description, delayMs }: FeatureColProps
       <h3 className="mt-5 font-sans text-[18px] font-medium uppercase tracking-[3.5px] text-black md:mt-6">
         {title}
       </h3>
-      <p className="mx-auto mt-3 max-w-[220px] font-sans text-[15px] font-light leading-[26px] text-black/61">
+      <p className="mx-auto mt-3 max-w-[240px] font-sans text-[15px] font-light leading-[26px] text-black/61">
         {description}
       </p>
     </div>
